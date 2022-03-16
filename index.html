@@ -1,238 +1,250 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mon site</title>
+    <title>Ma Super Belle Maquette</title>
+    <meta
+      name="description"
+      content="En voilà une maquette HTML5 et CSS3 qu'elle est belle <3"
+    />
 
+    <!-- Google webfonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&amp;family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300&amp;display=swap"
       rel="stylesheet"
     />
 
-    <script
-      src="https://kit.fontawesome.com/9c886c380c.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Fontawesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/styles.min.css" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
 
-    <script src="js/scripts.js" type="module" defer></script>
+    <!-- Javascripts -->
+    <script src="assets/js/zenscroll-min.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
   </head>
 
-  <body class="home">
+  <body>
+    <!-- Layout main header -->
     <header class="app-header">
-      <nav class="app-navigation">
-        <a href="index.html">Accueil</a>
-        <a href="#projet">Mon projet</a>
-        <a href="#equipe">Mon équipe</a>
-        <a href="#temoignages">Témoignages</a>
-        <a href="#contact">Contact</a>
+      <!-- Layout main navigation -->
+      <nav class="app-navigation" id="appNavigation">
+        <ul>
+          <li>
+            <a href="./" title="Retour à l'accueil"
+              ><i class="fas fa-home"></i>Accueil</a
+            >
+          </li>
+          <li>
+            <a href="./#projet" title="Section mon projet"
+              ><i class="fas fa-tasks"></i><span>Mon </span>projet</a
+            >
+          </li>
+          <li>
+            <a href="./#equipe" title="Section mon équipe"
+              ><i class="fas fa-users"></i><span>Mon </span>équipe</a
+            >
+          </li>
+          <li>
+            <a href="./#temoignages" title="Section témoignages"
+              ><i class="fas fa-comments"></i>Témoignages</a
+            >
+          </li>
+          <li>
+            <a href="./#contact" title="Formulaire de contact"
+              ><i class="fas fa-envelope"></i>Contact</a
+            >
+          </li>
+        </ul>
       </nav>
 
-      <div class="brandname">
-        <h1 class="app-name">Titre</h1>
-        <p class="app-slogan">Description du site</p>
+      <div class="app-brand">
+        <h1 class="app-brandname">Titre</h1>
+        <h2 class="app-brandline">Description du site</h2>
       </div>
     </header>
 
+    <!-- Layout main sections -->
     <main class="app-main">
+      <!-- Project section -->
       <section id="projet">
         <h2>Mon projet</h2>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Quisque</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           egestas quam in ligula vestibulum elementum. In ut velit nec eros
           blandit finibus sit amet ullamcorper magna. In gravida ex in diam
           aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
           tellus non libero tristique. Duis mi eros.
         </p>
-
-        <a href="#" class="app-btn modal" data-modal="moremodal"
-          >En savoir plus</a
-        >
+        <a href="#" class="app-button cta" role="button">En savoir plus</a>
       </section>
 
+      <!-- Team section -->
       <section id="equipe">
         <h2>Mon équipe</h2>
 
-        <div class="app-grid four">
-          <div class="app-grid-item">
+        <div class="app-grid">
+          <div class="grid-item">
             <img
-              src="img/arthur.jpg"
-              class="app-image rounded"
-              alt="Photo d'Arthur"
+              src="assets/images/arthur.jpg"
+              class="grid-item-image rounded"
+              width="200"
+              alt="Arthur"
             />
-            <h3 class="app-grid-item-title">Arthur</h3>
-            <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            <div class="grid-content">
+              <h3 class="grid-item-title">Arthur</h3>
+              <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            </div>
           </div>
-          <div class="app-grid-item">
+
+          <div class="grid-item">
             <img
-              src="img/celine.jpg"
-              class="app-image rounded"
-              alt="Photo de Céline"
+              src="assets/images/celine.jpg"
+              class="grid-item-image rounded"
+              width="200"
+              alt="Céline"
             />
-            <h3 class="app-grid-item-title">Céline</h3>
-            <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            <div class="grid-content">
+              <h3 class="grid-item-title">Céline</h3>
+              <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            </div>
           </div>
-          <div class="app-grid-item">
+
+          <div class="grid-item">
             <img
-              src="img/leo.jpg"
-              class="app-image rounded"
-              alt="Photo de Léo"
+              src="assets/images/leo.jpg"
+              class="grid-item-image rounded"
+              width="200"
+              alt="Léo"
             />
-            <h3 class="app-grid-item-title">Léo</h3>
-            <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            <div class="grid-content">
+              <h3 class="grid-item-title">Léo</h3>
+              <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            </div>
           </div>
-          <div class="app-grid-item">
+
+          <div class="grid-item">
             <img
-              src="img/cyril.jpg"
-              class="app-image rounded"
-              alt="Photo de Cyril"
+              src="assets/images/cyril.jpg"
+              class="grid-item-image rounded"
+              width="200"
+              alt="Cyril"
             />
-            <h3 class="app-grid-item-title">Cyril</h3>
-            <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            <div class="grid-content">
+              <h3 class="grid-item-title">Cyril</h3>
+              <p>Proin mattis tellus non libero tristique. Duis mi.</p>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- Testimonials section -->
       <section id="temoignages">
-        <div class="decoration" aria-hidden="true"></div>
-        <div class="content">
+        <div class="section-media">
+          <img src="assets/images/road.jpg" alt="Témoignages" />
+        </div>
+
+        <div class="section-content">
           <h2>Témoignages</h2>
-          <figure class="app-blockquote">
-            <blockquote>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                egestas quam in ligula vestibulum elementum. In ut velit nec
-                eros blandit finibus sit amet ullamcorper magna. In gravida ex
-                in diam aliquet tempor. Mauris pharetra placerat consectetur.
-              </p>
-            </blockquote>
-            <figcaption>Pierre Ceval</figcaption>
-          </figure>
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            egestas quam in ligula vestibulum elementum. In ut velit nec eros
+            blandit finibus sit amet ullamcorper magna. In gravida ex in diam
+            aliquet tempor. Mauris pharetra placerat consectetur.
+            <span class="legend">Pierre Ceval</span>
+          </blockquote>
         </div>
       </section>
 
+      <!-- Contact section -->
       <section id="contact">
         <h2>Contact</h2>
 
-        <form id="contactform" method="get" class="app-form" novalidate>
-          <div class="app-form-group app-grid two">
-            <div class="app-form-group">
-              <label for="contactformName">Nom *</label>
+        <form class="app-form" id="contactForm" method="post">
+          <div class="app-grid two">
+            <div class="form-group">
               <input
                 type="text"
-                id="contactformName"
+                id="nameInput"
                 name="name"
-                class="app-form-control"
-                minlength="3"
-                pattern="[a-z]{1,15}"
+                class="form-control"
                 required
+                aria-required="true"
               />
+              <label for="nameInput" class="form-label">Nom</label>
             </div>
-            <div class="app-form-group">
-              <label for="contactformEmail">Email *</label>
+
+            <div class="form-group">
               <input
                 type="email"
-                id="contactformEmail"
+                id="emailInput"
                 name="email"
-                class="app-form-control"
+                class="form-control"
                 required
+                aria-required="true"
               />
+              <label for="emailInput" class="form-label">Email</label>
             </div>
           </div>
 
-          <div class="app-form-group">
-            <label for="contactformMessage">Message *</label>
+          <div class="form-group">
             <textarea
+              id="messageInput"
               name="message"
-              id="contactformMessage"
-              rows="3"
-              class="app-form-control"
-              minlength="3"
+              rows="4"
+              class="form-control"
               required
+              aria-required="true"
             ></textarea>
+            <label for="messageInput" class="form-label">Message</label>
           </div>
 
-          <div class="app-form-actions">
-            <button type="submit" class="app-btn">Envoyer</button>
+          <div class="form-group submit">
+            <button type="submit" id="submitContactForm" class="app-button cta">
+              Envoyer
+            </button>
           </div>
         </form>
 
-        <div class="informations app-grid two">
-          <p>
-            <i class="fas fa-phone-alt"></i>
-            01.23.45.67.89
-          </p>
+        <div class="infos">
+          <div class="info">
+            <i class="fas fa-phone fa-flip-horizontal"></i>
+            <address>01.23.45.67.89</address>
+          </div>
 
-          <p>
+          <div class="info">
             <i class="fas fa-home"></i>
-            12 rue du Général<br />87000 Limoges
-          </p>
+            <address>
+              12 rue du Général<br />
+              87000 Limoges
+            </address>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Layout main footer -->
     <footer class="app-footer">
-      <a href="#" title="Lire les mentions légales">Mentions légales</a>
-      |
-      <a href="#" title="Voir le plan du site">Plan du site</a>
-      | © Copyright
-    </footer>
+      <div class="footerlinks">
+        <ul>
+          <li>
+            <a href="#" title="Lire les mentions légales">Mentions légales</a>
+          </li>
+          <li>
+            <a href="#" title="Voir le plan du site">Plan du site</a>
+          </li>
+        </ul>
 
-    <!-- More modal -->
-    <div class="app-modal" id="moremodal">
-      <button class="app-modal-close">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="app-modal-content">
-        <h2 class="app-modal-title">Mon projet</h2>
-        <img src="img/road.jpg" class="app-modal-image" alt="Mon projet est en rooute" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Quisque</strong>
-          egestas quam in ligula vestibulum elementum. In ut velit nec eros
-          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
-          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
-          tellus non libero tristique. Duis mi eros.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Quisque</strong>
-          egestas quam in ligula vestibulum elementum. In ut velit nec eros
-          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
-          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
-          tellus non libero tristique. Duis mi eros.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Quisque</strong>
-          egestas quam in ligula vestibulum elementum. In ut velit nec eros
-          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
-          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
-          tellus non libero tristique. Duis mi eros.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Quisque</strong>
-          egestas quam in ligula vestibulum elementum. In ut velit nec eros
-          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
-          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
-          tellus non libero tristique. Duis mi eros.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <strong>Quisque</strong>
-          egestas quam in ligula vestibulum elementum. In ut velit nec eros
-          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
-          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
-          tellus non libero tristique. Duis mi eros.
-        </p>
+        <p class="copyrights">© Copyright</p>
       </div>
-    </div>
+    </footer>
   </body>
 </html>

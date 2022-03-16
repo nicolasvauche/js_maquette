@@ -1,0 +1,58 @@
+.app-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 calc(#{$section-padding-y-default} / 2);
+    background-color: $color-grey;
+
+    @include for-phone {
+        display: block;
+        margin-bottom: $navigation-height-phone;
+        text-align: center;
+    }
+
+    .footerlinks {
+        display: inherit;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            display: inherit;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+
+            @include for-phone {
+                margin-bottom: 0.25rem;
+            }
+
+            li {
+                &:after {
+                    content: "|";
+                    margin: 0 0.5rem;
+
+                    @include for-phone {
+                        display: none;
+                    }
+                }
+
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $color-black;
+                    border-bottom: 1px dashed transparent;
+                    transition: all 0.5s;
+
+                    @include for-phone {
+                        display: block;
+                        padding: 0.25rem 0;
+                    }
+
+                    &:hover {
+                        color: $color-primary;
+                        border-color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
