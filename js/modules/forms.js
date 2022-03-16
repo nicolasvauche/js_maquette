@@ -1,5 +1,6 @@
 /**
- * Validate given form input
+ * Validation d'un champ de formulaire
+ * Fonction interne au module
  *
  * @param {DOMElement} input
  * @return {boolean}
@@ -64,7 +65,8 @@ const validateFormInput = input => {
 }
 
 /**
- * Validate given form
+ * Validation d'un formulaire
+ * Fonction exportée
  *
  * @param {DOMElement} form
  */
