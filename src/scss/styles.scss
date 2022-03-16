@@ -1,17 +1,10 @@
 /* Base imports */
-@import 
-  "base/reset",
-  "base/variables",
-  "base/typography",
-  "base/mixins",
+@import "base/reset", "base/variables", "base/typography", "base/mixins",
   "base/animations";
 
 /* Global layout import */
-@import
-  "layout/layout";
+@import "layout/layout";
 
 /* Components imports */
-@import
-  "components/buttons",
-  "components/grids",
-  "components/forms";
+@import "components/buttons", "components/grids", "components/forms",
+  "components/modals";

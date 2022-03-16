@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="assets/css/styles.min.css" />
 
     <!-- Javascripts -->
-    <script src="assets/js/zenscroll-min.js" defer></script>
-    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/vendors/zenscroll-min.js" defer></script>
+    <script src="assets/js/index.js" type="module" defer></script>
   </head>
 
   <body>
@@ -84,7 +84,13 @@
           aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
           tellus non libero tristique. Duis mi eros.
         </p>
-        <a href="#" class="app-button cta" role="button">En savoir plus</a>
+        <a
+          href="#"
+          class="app-button cta modal"
+          data-modal="aboutModal"
+          role="button"
+          >En savoir plus</a
+        >
       </section>
 
       <!-- Team section -->
@@ -168,7 +174,7 @@
       <section id="contact">
         <h2>Contact</h2>
 
-        <form class="app-form" id="contactForm" method="post">
+        <form class="app-form" id="contactForm" method="post" novalidate>
           <div class="app-grid two">
             <div class="form-group">
               <input
@@ -176,6 +182,7 @@
                 id="nameInput"
                 name="name"
                 class="form-control"
+                minlength="3"
                 required
                 aria-required="true"
               />
@@ -201,6 +208,7 @@
               name="message"
               rows="4"
               class="form-control"
+              minlength="3"
               required
               aria-required="true"
             ></textarea>
@@ -246,5 +254,60 @@
         <p class="copyrights">© Copyright</p>
       </div>
     </footer>
+
+    <!-- About modal -->
+    <div class="app-modal" id="aboutModal">
+      <button class="app-modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="app-modal-content">
+        <h2 class="app-modal-title">Mon projet</h2>
+        <img
+          src="assets/images/road.jpg"
+          class="app-modal-image"
+          alt="Mon projet est en rooute"
+        />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <strong>Quisque</strong>
+          egestas quam in ligula vestibulum elementum. In ut velit nec eros
+          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
+          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
+          tellus non libero tristique. Duis mi eros.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <strong>Quisque</strong>
+          egestas quam in ligula vestibulum elementum. In ut velit nec eros
+          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
+          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
+          tellus non libero tristique. Duis mi eros.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <strong>Quisque</strong>
+          egestas quam in ligula vestibulum elementum. In ut velit nec eros
+          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
+          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
+          tellus non libero tristique. Duis mi eros.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <strong>Quisque</strong>
+          egestas quam in ligula vestibulum elementum. In ut velit nec eros
+          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
+          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
+          tellus non libero tristique. Duis mi eros.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <strong>Quisque</strong>
+          egestas quam in ligula vestibulum elementum. In ut velit nec eros
+          blandit finibus sit amet ullamcorper magna. In gravida ex in diam
+          aliquet tempor. Mauris pharetra placerat consectetur. Proin mattis
+          tellus non libero tristique. Duis mi eros.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
