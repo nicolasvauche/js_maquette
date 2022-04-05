@@ -29,6 +29,7 @@
     background-color: $color-primary;
     border: 1px solid $color-primary;
     border-radius: 1.5rem;
+    cursor: pointer;
 
     i {
       font-size: 1.25rem;
@@ -38,6 +39,10 @@
 
   .app-modal-content {
     padding: 3rem 2rem;
+
+    @include media($from: "sm") {
+      margin: 4rem;
+    }
 
     .app-modal-title {
       margin-bottom: 3rem;
